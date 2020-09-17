@@ -7,8 +7,12 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     // config params
+    [Header("Player")]
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float padding = 0.5f;
+    [SerializeField] int health = 200;
+
+    [Header("Projectile")]
     [SerializeField] GameObject laserPrefab;
     [SerializeField] float projectileSpeed = 1f;
     [SerializeField] float projectileFiringPeriod = 0.5f;
@@ -76,5 +80,20 @@ public class Player : MonoBehaviour
             yield return new WaitForSeconds(projectileFiringPeriod);
         }
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D otherObject)
+    {
+        DamageDealer damageDealer = otherObject.gameObject.GetComponent<DamageDealer>();
+        ProcessHit(damageDealer);
+    }
+
+    private void ProcessHit(DamageDealer damageDealer)
+    {
+        health -= damageDealer.getDamage();
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
