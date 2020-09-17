@@ -11,6 +11,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] float maxTimeBetweenShots = 3f;
     [SerializeField] GameObject laserPrefab;
     [SerializeField] float projectileSpeed = 1f;
+    [SerializeField] GameObject explosionPrefab;
+    [SerializeField] float explosionDuration = 1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -56,7 +58,17 @@ public class Enemy : MonoBehaviour
         health -= damageDealer.getDamage();
         if (health <= 0)
         {
+            StartCoroutine(PlayExplosionVFX());
             Destroy(gameObject);
+            
         }
+    }
+
+    IEnumerator PlayExplosionVFX()
+    {
+        GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(explosionDuration);
+        Destroy(explosion);
+
     }
 }
