@@ -1182,6 +1182,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 39ea4ac1bb3e1a249a63cd7bf2379e0f,
         type: 2}
+    - target: {fileID: 7505611081739138332, guid: 5cff7287076fc3a4c80b9496bd8dd5a4,
+        type: 3}
+      propertyPath: timeBetweenWaves
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7505611081739138333, guid: 5cff7287076fc3a4c80b9496bd8dd5a4,
         type: 3}
       propertyPath: m_LocalPosition.x
