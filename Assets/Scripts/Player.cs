@@ -121,4 +121,9 @@ public class Player : MonoBehaviour
         Destroy(explosion);
 
     }
+
+    public int GetHealth()
+    {
+        return health;
+    }
 }

@@ -5,7 +5,11 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [Header("Enemy Stats")]
     [SerializeField] float health = 100f;
+    [SerializeField] int scoreValue = 150;
+
+    [Header("Shooting")]
     [SerializeField] float shotCounter;
     [SerializeField] float minTimeBetweenShots = 0.2f;
     [SerializeField] float maxTimeBetweenShots = 3f;
@@ -14,10 +18,12 @@ public class Enemy : MonoBehaviour
     [SerializeField] GameObject explosionPrefab;
     [SerializeField] float explosionDuration = 1f;
 
+    [Header("Sound Effects")]
     [SerializeField] AudioClip deathSFX;
     [SerializeField] [Range(0, 1)] float deathVolume = 0.3f;
     [SerializeField] AudioClip shootSound;
     [SerializeField] [Range(0, 1)] float shootSoundVolume = 0.1f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -64,11 +70,18 @@ public class Enemy : MonoBehaviour
         health -= damageDealer.getDamage();
         if (health <= 0)
         {
-            StartCoroutine(PlayExplosionVFX());
-            AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, deathVolume);
-            Destroy(gameObject);
-            
+            Die();
+
         }
+    }
+
+    private void Die()
+    {
+        FindObjectOfType<GameSession>().AddToScore(scoreValue);
+        Destroy(gameObject);
+        StartCoroutine(PlayExplosionVFX());
+        AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, deathVolume);
+        
     }
 
     IEnumerator PlayExplosionVFX()
