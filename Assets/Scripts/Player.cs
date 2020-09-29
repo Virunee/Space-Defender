@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     [SerializeField] AudioClip deathSFX;
     [SerializeField] GameObject explosionPrefab;
     [SerializeField] float explosionDuration = 1f;
+    [SerializeField] AudioClip hitSFX;
 
     [Header("Projectile")]
     [SerializeField] GameObject laserPrefab;
@@ -103,6 +104,9 @@ public class Player : MonoBehaviour
         if (health <= 0)
         {
             Die();
+        } else
+        {
+            AudioSource.PlayClipAtPoint(hitSFX, Camera.main.transform.position, deathVolume);
         }
     }
 
