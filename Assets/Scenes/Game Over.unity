@@ -231,7 +231,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Start
+  m_text: Play Again
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 14811628896e066459102905171f0a56, type: 2}
   m_sharedMaterial: {fileID: -88038088016683677, guid: 14811628896e066459102905171f0a56,
@@ -301,10 +301,10 @@ MonoBehaviour:
   m_margin: {x: 0.15399091, y: 0, z: 4.0344815, w: -3.7957041}
   m_textInfo:
     textComponent: {fileID: 122013202}
-    characterCount: 5
+    characterCount: 10
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 1
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -483,7 +483,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1905838590}
-        m_MethodName: QuitGame
+        m_MethodName: LoadStartMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -511,7 +511,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Quit
+  m_text: Main Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 14811628896e066459102905171f0a56, type: 2}
   m_sharedMaterial: {fileID: -88038088016683677, guid: 14811628896e066459102905171f0a56,
@@ -581,10 +581,10 @@ MonoBehaviour:
   m_margin: {x: -7.625664, y: -0.000001301166, z: -3.745278, w: -3.7956026}
   m_textInfo:
     textComponent: {fileID: 729763578}
-    characterCount: 4
+    characterCount: 9
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 1
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -736,7 +736,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Space Defender
+  m_text: Game Over
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 232a9ddf7c1691f458648e83eb8f3683, type: 2}
   m_sharedMaterial: {fileID: -164554852818392812, guid: 232a9ddf7c1691f458648e83eb8f3683,
@@ -746,8 +746,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190335
+  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -806,12 +806,12 @@ MonoBehaviour:
   m_margin: {x: -440.63016, y: 0, z: -440.45926, w: -288.74216}
   m_textInfo:
     textComponent: {fileID: 1242329854}
-    characterCount: 14
+    characterCount: 9
     spriteCount: 0
     spaceCount: 1
     wordCount: 2
     linkCount: 0
-    lineCount: 2
+    lineCount: 1
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -1159,7 +1159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 183}
+  m_AnchoredPosition: {x: 0, y: 339}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2061117239
@@ -1180,7 +1180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: by virunee
+  m_text: better  luck  next  time!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 14811628896e066459102905171f0a56, type: 2}
   m_sharedMaterial: {fileID: -88038088016683677, guid: 14811628896e066459102905171f0a56,
@@ -1226,7 +1226,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 20
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1250,12 +1250,12 @@ MonoBehaviour:
   m_margin: {x: -440.63016, y: 0, z: -440.45926, w: -59.423492}
   m_textInfo:
     textComponent: {fileID: 2061117239}
-    characterCount: 10
+    characterCount: 25
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 2
+    spaceCount: 6
+    wordCount: 4
     linkCount: 0
-    lineCount: 1
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
