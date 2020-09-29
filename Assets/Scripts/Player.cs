@@ -108,6 +108,7 @@ public class Player : MonoBehaviour
 
     private void Die()
     {
+        FindObjectOfType<Level>().LoadGameOver();
         StartCoroutine(PlayExplosionVFX());
         AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, deathVolume);
         Destroy(gameObject);
